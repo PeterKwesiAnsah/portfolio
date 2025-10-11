@@ -6,15 +6,13 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { SITE, HOME, SOCIALS } from "@consts";
 
+
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
+const projects:any[] = [];
 ---
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
@@ -25,7 +23,8 @@ const projects = (await getCollection("projects"))
       <section>
         <article class="space-y-4">
           <p class="animate">
-      I'm Ansah Peter, a Software Engineer living in Accra, Ghana. I’m interested in pushing the capabilities of browser based applications, Virtual Machines and Programming Languages. 
+      I'm Ansah Peter, a Software Engineer.I’ve built scalable solutions across fintech, e-commerce, and enterprise platforms—ranging from subscription systems and dashboards to blockchain-based tools.
+      Outside of work, I’m interested in Virtual Machines,Programming Languages and pushing the capabilities of web applications. 
      Currently building a <Link href="https://github.com/PeterKwesiAnsah/bangScript" external aria-label="BangScript Github Link">
       byte-code VM 
     </Link> to learn how browsers executes code. I have always had the curiosity to understand or learn how things work. 
