@@ -1,0 +1,41 @@
+---
+type Props= {
+    name: string;
+    description: string;
+    link: string;
+    date: string;
+    tags: string[];
+}
+const {link,name,description,tags}=Astro.props
+---
+
+<a  href={link} target="_blank" rel="noopener noreferrer" aria-label={name+" "+"Github Link"} >
+            <div class="flex justify-between items-center">
+              <div class="font-semibold">{name}</div>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24"
+                  class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current">
+                  <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
+                  <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+                </svg>
+            </div>
+            <div
+              class="text-sm text-black/80 dark:text-white/80 leading-relaxed description"
+              data-id={name}
+              data-full={description}
+            >
+              {description}
+            </div>
+            {
+            tags && tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-2">
+                {tags.map((tag) => (
+                  <span class="text-xs font-medium px-2 py-1 bg-black/10 dark:bg-white/10 text-black dark:text-white rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )
+        }
+</a>
