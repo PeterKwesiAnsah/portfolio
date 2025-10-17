@@ -1,0 +1,51 @@
+[
+	{
+		"name": "tScript",
+		"description": "Run JavaScript/TypeScript without a build or compile step. Import and execute third-party libraries with TypeScript IntelliSense support.",
+		"link": "https://github.com/PeterKwesiAnsah/tscript",
+		"date": "2025-10-17",
+		"tags": ["JavaScript", "TypeScript", "ESM", "WASM", "Web Tools"]
+	},
+	{
+		"name": "bangScript",
+		"description": "A JavaScript-like (not-JavaScript) scripting language built from scratch for fun and learning. Written in Go, currently being extended with a stack-based VM in C for performance and lower-level control.",
+		"link": "https://github.com/PeterKwesiAnsah/bangScript",
+		"date": "2025-01-01",
+		"tags": ["Go", "C", "VM", "Programming Language", "Systems"]
+	},
+	{
+		"name": "hack-assembler",
+		"description": "An assembler for the Hack machine language (from Nand2Tetris), written in C. Converts symbolic programs into their binary representations for the Hack computer.",
+		"link": "https://github.com/PeterKwesiAnsah/hack-assembler",
+		"date": "2024-08-01",
+		"tags": ["C", "Assembler", "Nand2Tetris", "Low-level"]
+	},
+	{
+		"name": "bitty",
+		"description": "A custom BitTorrent client built from scratch in Go. Supports torrent metadata parsing, peer connections, and file downloading. Plans include running in the browser via WASM.",
+		"link": "https://github.com/PeterKwesiAnsah/bitty",
+		"date": "2024-05-01",
+		"tags": ["Go", "Networking", "BitTorrent", "WASM"]
+	},
+	{
+		"name": "responsively",
+		"description": "Enhanced user experience by developing bookmark features to improve usability and functionality.",
+		"link": "https://github.com/PeterKwesiAnsah/responsively",
+		"date": "2023-12-01",
+		"tags": ["React", "Frontend", "UX", "Web"]
+	},
+	{
+		"name": "eslint-plugin-goodeffects",
+		"description": "An open-source ESLint plugin that enforces best practices for useEffect in React applications to improve code quality.",
+		"link": "https://github.com/PeterKwesiAnsah/eslint-plugin-goodeffects",
+		"date": "2023-06-01",
+		"tags": ["Open Source", "ESLint", "React", "JavaScript", "Tooling"]
+	},
+	{
+		"name": "JSON-parser",
+		"description": "A TypeScript-based JSON parser that validates and transforms JSON strings into an Abstract Syntax Tree (AST), handling nested objects and arrays.",
+		"link": "https://github.com/PeterKwesiAnsah/JSON-parser",
+		"date": "2023-03-01",
+		"tags": ["TypeScript", "Parser", "AST", "Web Tools"]
+	}
+]
