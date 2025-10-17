@@ -4,7 +4,9 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
+import projects from "@pages/projects/_projects.json"
 import { SITE, HOME, SOCIALS } from "@consts";
+import Project from "@components/Project.astro";
 
 
 const blog = (await getCollection("blog"))
@@ -12,23 +14,25 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects:any[] = [];
+const homeProjects = projects
+  .sort((a, b) => b.date.valueOf() - a.date.valueOf())
+  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 ---
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, <span class="text-xl">👋🏻</span> 
+      Hi <span class="text-xl">👋🏻</span>,
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
-          <p class="animate">
-      I'm Ansah Peter, a Software Engineer.I’ve built scalable solutions across fintech, e-commerce, and enterprise platforms—ranging from subscription systems and dashboards to blockchain-based tools.
-      Outside of work, I’m interested in Virtual Machines,Programming Languages and pushing the capabilities of web applications. 
+      <p class="animate">
+      I'm Ansah Peter, a Software Engineer passionate about building scalable solutions. I've worked across health tech, e-commerce, and enterprise platforms, creating everything from subscription systems to blockchain tools.
+      Outside of work, I'm fascinated by Virtual Machines, Programming Languages, 
+   and exploring the boundaries of what's possible in web applications.
      Currently building a <Link href="https://github.com/PeterKwesiAnsah/bangScript" external aria-label="BangScript Github Link">
       byte-code VM 
-    </Link> to learn how browsers executes code. I have always had the curiosity to understand or learn how things work. 
-    This blog site will document my journey of unravelling high-level software abstractions.
+    </Link> to understand how Javascript Engines work under the hood.
         </article>
       </section>
       <section class="animate space-y-6">
@@ -57,10 +61,10 @@ const projects:any[] = [];
             See all projects
           </Link>
         </div>
-        <ul class="flex flex-col gap-4">
-          {projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
+        <ul class="animate flex flex-col gap-4">
+          {homeProjects.map(project => (
+            <li class="relative group flex flex-col gap-3 py-4 px-5 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 ease-in-out">
+              <Project {...project} />
             </li>
           ))}
         </ul>
