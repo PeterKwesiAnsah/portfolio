@@ -85,7 +85,8 @@ if ok {
 
 ## Key Giveaways
 
-Most pitfalls I encountered when working with interfaces had to do with method design. Since Go implicitly implements interfaces (no explicit declaration required), be mindful of your method signatures and **[receiver types](https://go.dev/ref/spec#Method_declarations)** - they determine whether a type satisfies an interface.
+- Go Interfaces allow you to use a value of any type based on what it _can_ do , and not what it is.
+- Most pitfalls I encountered when working with interfaces had to do with method design. Since Go implicitly implements interfaces (no explicit declaration required), be mindful of your method signatures and **[receiver types](https://go.dev/ref/spec#Method_declarations)** - they determine whether a type satisfies an interface.
 
 ## What's Next
 
