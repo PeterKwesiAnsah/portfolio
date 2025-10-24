@@ -2,6 +2,7 @@
 title: Wait Kills
 description: A Brief story of locality.
 date: October 13, 2025
+draft: false
 ---
 
 Speed Kills. Usually that is how the phrase goes, but in this blog we won't be talking about road traffic accidents. We will talk about CPUs and the memory hierarchy. The CPU executes instructions and memory stores data. In a modern computer system, there are several storage technologies with varying speeds and storage capacities.
