@@ -2,6 +2,7 @@
 title: "Go Interfaces: Part One"
 description: Understanding Go Interfaces.
 date: October 24, 2025
+draft: false
 ---
 
 Writing a **[Tree-walk Interpreter](https://github.com/PeterKwesiAnsah/bangScript)** in Go, I found myself using interfaces a lot, so I decided to write a two-part series blog. **Part one** teaches what Go interfaces are and their uses.
